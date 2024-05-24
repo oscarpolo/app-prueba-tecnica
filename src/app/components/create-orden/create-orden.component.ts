@@ -99,7 +99,8 @@ export class CreateOrdenComponent implements OnInit  {
   }
 
   findCostumer(){
-    if (this.documentId != '') {
+    if (this.documentId != null && this.documentId?.toString()?.trim() != '') {
+      console.log("docuemte id", this.documentId)
       this.createOrderService.searchClientById(this.documentId.toString()).subscribe(result => {
         this.customer = result;
         if(this.customer.length > 0){
@@ -115,12 +116,13 @@ export class CreateOrdenComponent implements OnInit  {
   }
 
   saveOrder(){
-    if(this.documentId.toString().trim() == '' || this.address.trim() == '' || this.productsOrder.length <= 0){
+    console.log("al guardar", this.documentId?.toString()?.trim())
+    if(this.documentId == null || this.documentId?.toString()?.trim() == '' || this.address?.trim() == '' || this.productsOrder.length <= 0 || this.address == null){
       this.Toast.fire({ icon: "error", title: "Faltan datos por ingresar" });
       return;
     }
 
-    if (this.documentId != '') {
+    if (this.documentId != '' && this.documentId != null) {
       this.createOrderService.searchClientById(this.documentId.toString()).subscribe(result => {
         this.customer = result;
         if(this.customer.length > 0){
