@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { Products, NewOrder } from '../interfaces/interfaces';
+import { environment } from '../../../environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { Products, NewOrder } from '../interfaces/interfaces';
 
 export class CreateorderService {
 
-  private baseUrl: string = 'https://localhost:7253';
+  private baseUrl: string = environment.apiUrl;
   public products: Products[] = [];
 
   constructor(private http: HttpClient) { }
