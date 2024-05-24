@@ -1,0 +1,73 @@
+
+<div class="container">
+  <h1 class="text-center mb-3">Registrar Pedidos</h1>
+</div>
+
+<figcaption class="blockquote-footer mb-1 mt-4 text-secondary">
+  <strong>Informacion del cliente</strong>
+</figcaption>
+<div class="mb-3">
+  <div class="input-group mb-3">
+    <input class="form-control" type="number" placeholder="Cedula" [(ngModel)]="documentId" />
+    <span class="input-group-text">
+      <i class="bi bi-search"></i>
+    </span>
+    <button class="btn btn-success" type="button" id="button-addon2" (click)="findCostumer()">Buscar Cliente</button>
+  </div>
+  <div class="input-group mb-3">
+    <input class="form-control" type="text" placeholder="Direccion" [(ngModel)]="address" />
+    <span class="input-group-text">
+      <i class="bi bi-building-add"></i>
+    </span>
+  </div>
+</div>
+
+<figcaption class="blockquote-footer mb-1 mt-4 text-secondary">
+  <strong>Registro de productos</strong>
+</figcaption>
+<div class="search-container d-flex gap-2 position-relative">
+  <div class="col-6 position-relative">
+    <div class="input-group">
+      <input class="form-control" type="text" placeholder="Search..." [(ngModel)]="query" (input)="onSearch()" />
+      <span class="input-group-text">
+        <i class="bi bi-search"></i>
+      </span>
+    </div>
+    <ul class="list-unstyled position-absolute start-0 top-100 bg-white shadow rounded p-2 w-100"
+        *ngIf="products.length">
+      <li *ngFor="let result of products" (click)="selectItem(result)">{{ result.productName }}</li>
+    </ul>
+  </div>
+  <input class="form-control" type="number" placeholder="Cantidad" [(ngModel)]="count" />
+  <button class="btn btn-primary col-2" (click)="addProduct()">Agregar</button>
+</div>
+
+<div>
+  <table class="table table-striped mt-4" aria-labelledby="tableLabel" *ngIf="productsOrder">
+    <thead class="table-light">
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productsOrder">
+        <td>{{ product.productName }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.count }}</td>
+        <td>{{ product.total }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteProduct(product.productID)"><i class="bi bi-trash"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="fw-bold"> Total a pagar: ${{ getSubTotal(productsOrder) }}</span>
+</div>
+
+<div class="d-flex justify-content-end">
+  <button [disabled]="isButtonDisabled" type="button" class="btn btn-success mt-5" (click)="saveOrder()">Crear Pedido</button>
+</div>

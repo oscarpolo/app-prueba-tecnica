@@ -1,0 +1,7 @@
+.search-container .col-6 ul li {
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.search-container .col-6 ul li:hover {
+  background-color: #cfe0e7;
+}

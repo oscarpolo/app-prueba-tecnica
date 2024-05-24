@@ -1,0 +1,198 @@
+<main class="main">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="container-logo">
+          <i class="bi bi-bicycle fs-1"></i>
+        </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contacto</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <div class="container-fluid main-content">
+    <div class="container-logo">
+      <h1 class="display-4"><i class="bi bi-bicycle"></i>Rigo Rigo</h1>
+    </div>
+    <p class="lead">Explora nuestros productos y servicios, y descubre por qué somos los mejores en el negocio.</p>
+  </div>
+
+  <div class="container-buttons d-flex gap-2">
+    <button class="form-control">GESTIONAR CLIENTES</button>
+    <button class="form-control">BUSCAR PEDIDOS</button>
+    <button class="form-control btn btn-success" data-bs-toggle="modal" data-bs-target="#editCountModal">REGISTRAR PEDIDOS</button>
+  </div>
+
+  <div class="modal fade modal-xl" id="editCountModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="display-4" style="font-size: xx-large;"><i class="bi bi-bicycle fs-1"></i></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #myButtonClose></button>
+        </div>
+        <div class="modal-body ps-5 pe-5 pb-5">
+          <app-create-orden (evento)="closeModal()"></app-create-orden>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row g-5">
+          <div class="col-4">
+            <div class="card-image">
+              <div class="image-container">
+                <img src="https://cdn.shopify.com/s/files/1/0527/0991/6846/files/FreedomShimanoTiagraTA_2.jpg?v=1713472738&width=460" alt="Imagen de bicicleta">
+              </div>
+              <div class="info-bici">
+                <a class="product-grid-item__title font-heading" href="#" aria-label="Bicicleta de ruta en aluminio Mítica Gonawindua" data-grid-link="">Bicicleta de ruta en aluminio Mítica Gonawindua</a>
+                <p class="product-cutline">Grupo LTWOO R5 9 velocidades</p>
+                <a class="product-grid-item__price price" href="#" data-grid-link="">$2.120.000 COP</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card-image">
+              <div class="image-container">
+                <img src="https://cdn.shopify.com/s/files/1/0527/0991/6846/files/FreedomShimanoTiagraCC_2.jpg?v=1713392346&width=460" alt="Imagen de bicicleta">
+              </div>
+              <div class="info-bici">
+                <a class="product-grid-item__title font-heading" href="#" aria-label="Bicicleta de ruta en aluminio Mítica Gonawindua" data-grid-link="">Bicicleta de ruta en aluminio Mítica Gonawindua</a>
+                <p class="product-cutline">Grupo LTWOO R5 9 velocidades</p>
+                <a class="product-grid-item__price price" href="#" data-grid-link="">$2.120.000 COP</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card-image">
+              <div class="image-container">
+                <img src="https://cdn.shopify.com/s/files/1/0527/0991/6846/files/FreedomShimanoTiagraCA_5.jpg?v=1713471061&width=460" alt="Imagen de bicicleta">
+              </div>
+              <div class="info-bici">
+                <a class="product-grid-item__title font-heading" href="#" aria-label="Bicicleta de ruta en aluminio Mítica Gonawindua" data-grid-link="">Bicicleta de ruta en aluminio Mítica Gonawindua</a>
+                <p class="product-cutline">Grupo LTWOO R5 9 velocidades</p>
+                <a class="product-grid-item__price price" href="#" data-grid-link="">$2.120.000 COP</a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row g-5">
+          <div class="col-4">
+            <div class="card-image">
+              <div class="image-container">
+                <img src="https://cdn.shopify.com/s/files/1/0527/0991/6846/files/FredoomLTWOOR9CA_2.jpg?v=1713471053&width=460" alt="Imagen de bicicleta">
+              </div>
+              <div class="info-bici">
+                <a class="product-grid-item__title font-heading" href="#" aria-label="Bicicleta de ruta en aluminio Mítica Gonawindua" data-grid-link="">Bicicleta de ruta en aluminio Mítica Gonawindua</a>
+                <p class="product-cutline">Grupo LTWOO R5 9 velocidades</p>
+                <a class="product-grid-item__price price" href="#" data-grid-link="">$2.120.000 COP</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card-image">
+              <div class="image-container">
+                <img src="https://cdn.shopify.com/s/files/1/0527/0991/6846/files/MiticaLTWOOR5Ritakuwa_1.jpg?v=1713395373&width=460" alt="Imagen de bicicleta">
+              </div>
+              <div class="info-bici">
+                <a class="product-grid-item__title font-heading" href="#" aria-label="Bicicleta de ruta en aluminio Mítica Gonawindua" data-grid-link="">Bicicleta de ruta en aluminio Mítica Gonawindua</a>
+                <p class="product-cutline">Grupo LTWOO R5 9 velocidades</p>
+                <a class="product-grid-item__price price" href="#" data-grid-link="">$2.120.000 COP</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card-image">
+              <div class="image-container">
+                <img src="https://cdn.shopify.com/s/files/1/0527/0991/6846/files/MiticaLTWOOR5Cumbal_5.jpg?v=1713394568&width=460" alt="Imagen de bicicleta">
+              </div>
+              <div class="info-bici">
+                <a class="product-grid-item__title font-heading" href="#" aria-label="Bicicleta de ruta en aluminio Mítica Gonawindua" data-grid-link="">Bicicleta de ruta en aluminio Mítica Gonawindua</a>
+                <p class="product-cutline">Grupo LTWOO R5 9 velocidades</p>
+                <a class="product-grid-item__price price" href="#" data-grid-link="">$2.120.000 COP</a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row g-5">
+          <div class="col-4">
+            <div class="card-image">
+              <div class="image-container">
+                <img src="https://cdn.shopify.com/s/files/1/0527/0991/6846/files/BICICLETA-RUTA-LTWOO-GONAWINDUA3.jpg?v=1713478445&width=460" alt="Imagen de bicicleta">
+              </div>
+              <div class="info-bici">
+                <a class="product-grid-item__title font-heading" href="#" aria-label="Bicicleta de ruta en aluminio Mítica Gonawindua" data-grid-link="">Bicicleta de ruta en aluminio Mítica Gonawindua</a>
+                <p class="product-cutline">Grupo LTWOO R5 9 velocidades</p>
+                <a class="product-grid-item__price price" href="#" data-grid-link="">$2.120.000 COP</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card-image">
+              <div class="image-container">
+                <img src="https://cdn.shopify.com/s/files/1/0527/0991/6846/files/MiticaLTWOOR5Wila_5_5ab2fe14-0e5b-475a-aa12-4d5ae7c96231.jpg?v=1713395119&width=460" alt="Imagen de bicicleta">
+              </div>
+              <div class="info-bici">
+                <a class="product-grid-item__title font-heading" href="#" aria-label="Bicicleta de ruta en aluminio Mítica Gonawindua" data-grid-link="">Bicicleta de ruta en aluminio Mítica Gonawindua</a>
+                <p class="product-cutline">Grupo LTWOO R5 9 velocidades</p>
+                <a class="product-grid-item__price price" href="#" data-grid-link="">$2.120.000 COP</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card-image">
+              <div class="image-container">
+                <img src="https://spirobicycles.com/cdn/shop/files/BICICLETA-RUTA-CARBONO-SHIMANO4_jpg.jpg?v=1713900311&width=460" alt="Imagen de bicicleta">
+              </div>
+              <div class="info-bici">
+                <a class="product-grid-item__title font-heading" href="#" aria-label="Bicicleta de ruta en aluminio Mítica Gonawindua" data-grid-link="">Bicicleta de ruta en aluminio Mítica Gonawindua</a>
+                <p class="product-cutline">Grupo LTWOO R5 9 velocidades</p>
+                <a class="product-grid-item__price price" href="#" data-grid-link="">$2.120.000 COP</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="mt-5 mb-5 text-center gap-5">
+      <div class="spinner-grow text-primary" role="status">
+      </div>
+      <div class="spinner-grow text-secondary" role="status">
+      </div>
+      <div class="spinner-grow text-success" role="status">
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+      </div>
+      <div class="spinner-grow text-info" role="status">
+      </div>
+      <div class="spinner-grow text-light" role="status">
+      </div>
+      <div class="spinner-grow text-dark" role="status">
+      </div>
+    </div>
+  </div>
+</main>
+
+<router-outlet />
